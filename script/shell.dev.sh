@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-echo $PATH
 node -v
 npm -v #检查编译环境
 npm install chromedriver --chromedriver_cdnurl=http://cdn.npm.taobao.org/dist/chromedriver
