@@ -2,7 +2,8 @@ echo $PATH
 node -v
 npm -v
 npm install
-echo pwd
+var_path = `pwd`
+echo $var_path
 npm run build
 cd build
 tar -zcvf dist.tar.gz *
