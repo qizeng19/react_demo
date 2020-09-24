@@ -10,7 +10,7 @@ containerName="help-repair-dealer-test";
 # jenkins服务器开放的的前端访问端口
 port="80"
 # 镜像中server暴露的端口号
-exposePort="8081"
+exposePort="80"
 ``
 echo "--> yarn install"
 cd ..
