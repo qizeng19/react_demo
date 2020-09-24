@@ -1,3 +1,4 @@
+#/usr/bin
 echo $PATH
 node -v
 npm -v #检查编译环境
