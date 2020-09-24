@@ -2,6 +2,7 @@ echo $PATH
 node -v
 npm -v
 npm install
+echo pwd
 npm run build
 cd build
 tar -zcvf dist.tar.gz *
