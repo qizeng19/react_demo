@@ -1,6 +1,7 @@
 echo $PATH
 node -v
 npm -v
+echo "$(pwd)"
 npm install
 var_path = `pwd`
 echo $var_path
