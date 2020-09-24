@@ -1,14 +1,26 @@
-echo $PATH
-node -v
-npm -v
-echo "$(pwd)"
-npm install
-var_path = `pwd`
-echo $var_path
-npm run build
+ 
+
+#/usr/bin
+# 当前镜像版本号
+version="1.0.0";
+# 镜像名
+imageName="help-repair-dealer-test";
+# 容器名
+containerName="help-repair-dealer-test";
+# jenkins服务器开放的的前端访问端口
+port="80"
+# 镜像中server暴露的端口号
+exposePort="8081"
+``
+echo "--> yarn install"
 cd ..
-cd build
-tar -zcvf dist.tar.gz *
-tar -zxvf /root/.jenkins/workspace/react_demo/build/dist.tar.gz -C /usr/share/nginx/html
-cd /root/.jenkins/workspace/react_demo
-# rm -R build
+sudo npm install && sudo npm run build
+
+echo "--> copy files shell.dev.sh"
+sudo cp -rf Dockerfile ./build
+cd ./build
+
+echo "--> docker build"
+sudo docker build -t "$imageName":"$version" .
+sudo docker rm -f "$containerName" || echo 'continue'
+sudo docker run -d -p "$port":"$exposePort" --privileged --restart=always --name "$containerName" "$imageName":"$version"
