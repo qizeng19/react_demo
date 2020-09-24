@@ -17,7 +17,8 @@ const Demo = () => {
   
     return (
       <div>
-        <input
+        jenkins + docker ^ ~ ^ ...
+        {/* <input
           type="text"
           value={val}
           placeholder="Debounced input"
@@ -30,7 +31,7 @@ const Demo = () => {
         <div>
           Debouncedfsssssssssssssssssssssssssssssssssssssssssssss value: {debouncedValue}
           <button onClick={cancel}>Cancel debounce</button>
-        </div>
+        </div> */}
       </div>
     );
   };
